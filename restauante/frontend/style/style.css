@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Special Elite', cursive;
+    padding-top: 40px;
+    color: rgb(141, 87, 51);
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: absolute;
+}
+
+.container {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 400px;
+    justify-content: center;
+    /* gap: 5px; */
+    /* text-align: start; */
+    align-items: center;
+}
+
+label {
+    color: rgb(141, 87, 51);
+    text-shadow:
+        -1px -1px 0 #000,
+        2px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 50px;
+}
+
+input {
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    flex-direction: column;
+    width: 100%;
+    justify-self: center;
+}
