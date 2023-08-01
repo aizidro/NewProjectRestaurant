@@ -14,7 +14,7 @@
     </header>
     <main>
         <!-- <div class="container"> -->
-        <form>
+        <form method="post" action="localhost:3000/autenticar">
             <div class="login">
                 <label for="email">Login</label>
                 <input type="text" id="email" name="email">
@@ -23,11 +23,11 @@
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha"> 
             </div>
-            <button id="botao" onclick="autenticar()">autenticar</button>
+            <button id="botao" type="submit">Logar</button>
         </form>
         <!-- :  </div> -->
     </main>
 </body>
-<script src="../api/script/login.js"></script>
+<script src="./script/login.js"></script>
 
 </html>

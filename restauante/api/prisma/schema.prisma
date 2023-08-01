@@ -29,13 +29,15 @@ model Motoboy {
 }
 
 model Cliente {
-  id                  Int      @id @default(autoincrement())
-  cpf                 String   @unique
-  nome                String
-  telefones           String
-  enderecoCep         String
-  enderecoComplemento String
-  Pedido              Pedido[]
+  id          Int      @id @default(autoincrement())
+  cpf         String   @unique
+  nome        String
+  telefones   String
+  cep         String
+  complemento String
+  Pedido      Pedido[]
+  email       String
+  senha       String
 }
 
 model Pedido {
