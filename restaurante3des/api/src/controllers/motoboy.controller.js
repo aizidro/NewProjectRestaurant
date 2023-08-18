@@ -10,8 +10,18 @@ const create = async (req, res) => {
 }
 
 const read = async (req, res) => {
-    const motoboys = await prisma.motoboy.findMany();
-    return res.json(motoboys);
+    if (req.params.id) {
+        const id = parseInt(req.params.id);
+        const motoboy = await prisma.motoboy.findUnique({
+            where: {
+                id: id
+            }
+        });
+        return res.json(motoboy);
+    } else {
+        const motoboy = await prisma.motoboy.findMany();
+        return res.json(motoboy);
+    }
 }
 
 const update = async (req, res) => {

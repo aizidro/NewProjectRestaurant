@@ -7,12 +7,12 @@ const { prisma } = require("../dao/connect")
 
 const create = async (req, res) => {
     try {
-        const pedido = await prisma.pedido.create({
+        const motoboy = await prisma.motoboy.create({
             data: {
                 ...req.body
             }
         });
-        res.json(pedido);
+        res.json(motoboy);
     } catch (error) {
         console.error('Error creating menu:', error);
         res.status(500).json({ error: 'Failed to create user.' });
@@ -22,29 +22,29 @@ const create = async (req, res) => {
 const listar = async (req, res) => {
     if (req.params.id) {
         const id = parseInt(req.params.id);
-        const pedido = await prisma.pedido.findUnique({
+        const motoboy = await prisma.motoboy.findUnique({
             where: {
                 id: id
             }
         });
-        return res.json(pedido);
+        return res.json(motoboy);
     } else {
-        const pedido = await prisma.pedido.findMany();
-        return res.json(pedido);
+        const motoboy = await prisma.motoboy.findMany();
+        return res.json(motoboy);
     }
 }
 
 const deletar = async (req, res) => {
-    const cardapioId = parseInt(req.params.id);
+    const motoboyId = parseInt(req.params.id);
     try {
-        const deleteCardapio = await prisma.cardapio.delete({
+        const deleteMotoboy = await prisma.motoboy.delete({
             where: { 
-                id: cardapioId
+                id: motoboyId
             }
         })
-        res.json(deleteCardapio);
+        res.json(deleteMotoboy);
     }catch (error) {
-        console.error('Erro ao deletar o Cardapio: ' + error);
+        console.error('Erro ao deletar o Motoboy: ' + error);
         res.status(500).json({ error: 'Failed to delete client.' });    
     }
 }
